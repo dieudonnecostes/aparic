@@ -13,7 +13,6 @@ export const Logo = (locale, homePath) => {
     `
 }
 
-
 export const MenuGrid = (locale, homePath) => {
     const provincesData = [
         {}
@@ -71,30 +70,20 @@ export const MenuGrid = (locale, homePath) => {
         </div>
     </div>
     <div class="footer-item">
-        <p class="footer-item-title">Notre structuration</p>
-        <div class="footer-item-links">
-            <a>Membres</a>
-            <a>Comité Exécutif</a>
-            <a>Comité de surveillance</a>
-            <a>Commissions de travail</a>
-        </div>
+    <p class="footer-item-title">Vie associative</p>
+    <div class="footer-item-links">
+        <a href="${homePath}pv">PV des réunions</a>
+        <a href="https://d29cc8o2s6hm2a.cloudfront.net/aparic/Fiche+de+cre%CC%81ation+d'un+organe.docx" target="_blank">Fiche de création d'un organe</a>
     </div>
-
+</div>
     <div class="footer-item">
         <p class="footer-item-title">Nos projets</p>
         <div class="footer-item-links">
-            <a href="${homePath}projets">Réalisés</a>
-            <a href="${homePath}projets">En cours</a>
+            <a href="${homePath}projets#realises">Réalisés</a>
+            <a href="${homePath}projets#en-cours">En cours</a>
         </div>
     </div>
-    <div class="footer-item">
-        <p class="footer-item-title">Vie associative</p>
-        <div class="footer-item-links">
-            <a>PV des réunions</a>
-            <a>Rapports d'activités</a>
-            <a>Fiche de création d'un organe</a>
-        </div>
-    </div>
+
     <div class="footer-item">
         <p class="footer-item-title">Nous soutenir</p>
         <div class="footer-item-links">
@@ -105,9 +94,6 @@ export const MenuGrid = (locale, homePath) => {
 </div>
     `
 }
-
-
-
 
 export const Footer = (locale, homePath) => {
     return `
@@ -137,7 +123,6 @@ export const NavHolder = (locale, homePath) => {
     `
 }
 
-
 export const NavBar = (locale, homePath) => {
     return `
         <div class="nav-header">
@@ -162,3 +147,8 @@ export const NavBar = (locale, homePath) => {
         <div class="nav-menu-holder">${NavHolder(locale, homePath)}</div>
     `;
 }
+
+export const Partners = (locale, homePath) => {
+
+}
+
