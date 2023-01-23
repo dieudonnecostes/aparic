@@ -98,9 +98,7 @@ export const MenuGrid = (locale, homePath) => {
     <div class="footer-item">
         <p class="footer-item-title">Nous soutenir</p>
         <div class="footer-item-links">
-            <a>Etre membre (adhérent, honneur)</a>
-            <a>Faire un don</a>
-            <a>Devenir bénévole</a>
+            <a href="${homePath}devenir-membre">Devenir membre (adhérent, honneur)</a>
         </div>
     </div>
 
