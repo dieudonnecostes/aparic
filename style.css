@@ -849,6 +849,10 @@ button:hover {
         display: none;
     }
 
+    .numbers .right{
+        width: 100%;
+    }
+
     .sized-normal{
         height: 15rem;
         width: 15rem;
