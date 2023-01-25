@@ -266,14 +266,11 @@ footer,.nav-menu-holder {
     grid-gap: 2rem;
 }
 
-#pv-meetings div{
-    background-color: var(--card);
-    padding: 3rem 1rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#pv-meetings{
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); 
 }
+
+
 
 .footer-item {
     display: flex;
@@ -704,7 +701,8 @@ button:hover {
     text-transform: uppercase;
     color: black;
     cursor: pointer;
-    margin-bottom: .5rem;
+    margin: .7rem 0rem;
+    margin-top: 1rem;
 }
 
 .single-pv-title:hover{
@@ -713,5 +711,34 @@ button:hover {
 
 .single-pv-subtitle{
     color: gray;
+}
+
+.single-pv iframe{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 10rem;
+    max-height: 10rem;
+    min-height: 10rem;
+    padding: 0;
+    margin: 0;
+
+}
+
+#pv-meetings div{
+    background-color: var(--card);
+    padding: 0rem 0rem 1rem 0rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: .7rem;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.single-pv{
+    padding: 0;
 }
 
