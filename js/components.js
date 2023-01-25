@@ -139,7 +139,7 @@ export const NavBar = (locale, homePath) => {
                 </a>
                 <a class="icon-text flex column-gap-middle">
                     <i class="fa fa-clock"></i>
-                    <p>Lun - Sam 8:00am - 4:00pm</p>
+                    <p>Lun - Sam 8:00' - 16:00'</p>
                 </a>
                 <i id="bars-menu" class="fa fa-bars" onclick="displayMenu(1)"></i>
             </div>
@@ -148,7 +148,65 @@ export const NavBar = (locale, homePath) => {
     `;
 }
 
-export const Partners = (locale, homePath) => {
-
+export const Partners = (locale, homePath, status) => {
+    const partners = [
+        {
+            name: "Ministre de  l’Education Nationale et de la Recherche Scientifique",
+            comment: "",
+            letter: "",
+            status: "public",
+        },
+        {
+            name: "Ministre de la Fonction Publique, du Travail et de l’Emploi",
+            comment: "",
+            letter: "",
+            status: "public",
+        },
+        {
+            name: "Ministre des Affaires de la Communauté Est Africaine, de la Jeunesse, des Sports et de la Culture",
+            comment: "",
+            letter: "",
+            status: "public",
+        },
+        {
+            name: "Ministre de la Femme, de la Solidarité nationale, de la Famille et de l'Action humanitaire",
+            comment: "",
+            letter: "",
+            status: "public",
+        },
+        {
+            name: "ALCS Tabara",
+            comment: "",
+            letter: "",
+            status: "associative",
+        },
+        {
+            name: "Fédération Nationale des Associations engagées dans le Domaine de l'Enfance au Burundi, FENADEB",
+            comment: "",
+            letter: "",
+            status: "associative",
+        },
+        {
+            name: "Jeunesse Porte flambeau contre le Sida et la Drogue, JPCSD",
+            comment: "",
+            letter: "",
+            status: "associative",
+        },
+        {
+            name: "Fédération des pêcheurs et fournisseurs des poissons au Burundi/ Coopérative des Pêche pour le Développement du Commerce de Poissons au Burundi, FPFPB/ COPEDECOBU",
+            comment: "",
+            letter: "",
+            status: "associative",
+        },
+    ];
+    return `${partners.filter((element) => element.status === status).map((e) => {
+                console.log(e);
+                return `<div class="partner-item">
+                    <img src="${e.photo ?? " https://us.123rf.com/450wm/mathier/mathier1905/mathier190500002/mathier190500002.jpg?ver=6"}" />
+                    <p class="p-medium bold">${e.name}</p>
+                    <p class="partner-comment">${e.comment}</p>
+                    <a href=${e.letter}>Lettre de partenariat</a>
+                </div>`;
+    })}`.replaceAll(",","");
 }
 

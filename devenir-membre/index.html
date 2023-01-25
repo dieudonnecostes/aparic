@@ -26,34 +26,55 @@
             <div class="h-c-title large-title">Devenir membre</div>
         </div>
     </section>
-    <section id="contact-us" class="duo">
+    <section id="become-member" class="duo">
         <div class="duo-left contact-info">
             <div class="contact-info-box">
-                <h1 class="large-title">Contactez-nous</h1>
-                <p>Pour plus d'informations. S'il vous plaît contactez-nous sur les contacts donnés ou rejoignez-nous à
-                    notre bureau pour plus
-                    de clarification.</br>Remplissez le formulaire et notre équipe vous répondra dans les 24 heures.</p>
-            </div>
-            <div class="contact-info-box">
-                <div class="single-contact flex-row column-gap-middle">
-                    <i class="fa fa-phone"></i>
-                    <p>+257 62 18 30 15</p>
-                </div>
-                <div class="single-contact flex-row column-gap-middle">
-                    <i class="fa fa-envelope"></i>
-                    <p>hfa@burundibrewery.com, havdeluc@outlook.com</p>
-                </div>
-                <div class="single-contact flex-row column-gap-middle">
-                    <i class="fa fa-location-dot"></i>
-                    <p>Vyerwa, Ngozi, Burundi</p>
-                </div>
-                <div class="single-contact flex-row column-gap-middle">
-                    <i class="fa fa-toolbox"></i>
-                    <p>BP 41 Ngozi Burundi</p>
-                </div>
+                <p class="large-subtitle">Veuillez remplir le formulaire, et notre équipe vous répondra via l'e-mail que
+                    vous avez fourni</br> dans les 48 heures suivant votre demande de devenir membre.</p>
             </div>
         </div>
-        <div id="contact-us-form" class="duo-right"></div>
+        <form class="become-a-member-form">
+            <div class="input-labeled-block">
+                <div className="input-labeled">
+                    <label>Nom</label>
+                    <input type="name" placeholder="Entre votre nom" name="Name" required></input>
+                </div>
+                <div className="input-labeled">
+                    <label>Prénom</label>
+                    <input type="name" placeholder="Entre votre prénom" name="Name" required></input>
+                </div>
+                <div className="input-labeled">
+                    <label>Institution</label>
+                    <input type="name" placeholder="Entre votre institution" name="Name" required></input>
+                </div>
+                <div className="input-labeled">
+                    <label>Fonction</label>
+                    <input type="name" placeholder="Entre votre onction" name="Function" required></input>
+                </div>
+            </div>
+
+            <div class="input-labeled-block">
+                <div className="input-labeled">
+                    <label>Adresse</label>
+                    <input type="name" placeholder="Entre l'adresse de votre domicile" name="Address" required></input>
+                </div>
+                <div className="input-labeled">
+                    <label>Tél</label>
+                    <input type="tel" placeholder="Entre votre numero de téléphone" name="Phone" required></input>
+                </div>
+                <div className="input-labeled">
+                    <label>Email</label>
+                    <input type="email" placeholder="Entre votre email" name="Email" required></input>
+                </div>
+                <div className="input-labeled">
+                    <label>Commission choisie</label>
+                    <input type="name" placeholder="Entre la commission choisie" name="Name" required></input>
+                </div>
+            </div>
+
+
+            <button type="submit">Devenir membre</button>
+        </form>
     </section>
     <footer id="footer"></footer>
     <script>

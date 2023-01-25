@@ -1,4 +1,4 @@
-import { NavBar, Footer } from './components.js';
+import { NavBar, Footer, Partners } from './components.js';
 
 const homePath = localStorage.getItem('home') ?? '/'
 
@@ -13,6 +13,8 @@ function innerHTML(key, html) {
 function insertTemplates({ locale = 'fr' }) {
     innerHTML('.nav-headers-menu', NavBar(locale, homePath));
     innerHTML('#footer', Footer(locale, homePath));
+    innerHTML('#public-parters', Partners(locale, homePath, "public"));
+    innerHTML('#associative-parters', Partners(locale, homePath, "associative"));
 }
 
 insertTemplates({ locale: 'fr' });
