@@ -150,7 +150,8 @@ export const NavBar = (locale, homePath) => {
 
 export const Partners = (locale, homePath, list, status, yearOf) => {
     console.log(yearOf, locale, status);
-    const partners = list.filter((element) => element.year === yearOf);
+    const partners = list;
+    // const partners = list.filter((element) => element.year === yearOf);
     const finalP = partners.filter((element) => element.status === status);
     if (!finalP.length) return `<p class="p-medium">Nous n'avons pas de données pour ${yearOf}</p>`;
     return `${finalP.map((e) => {
@@ -200,8 +201,6 @@ export const ProvinceOfIntervention = (locale, homePath, provinces) => {
     </p>
     `.replaceAll(",", "");
 }
-
-
 
 export const NumberStat = (locale, homePath, store) => {
     const { improvedLife, provincesOfInterventions, partner } = store;
