@@ -875,10 +875,7 @@ button:hover {
         row-gap: 2rem;
     }
 
-    #what-we-do:nth-child(even) img{
-        display: none;
-        border-radius: none !important;
-    }
+
 
     #what-we-do:nth-child(even){
         row-gap: 0;
@@ -901,6 +898,18 @@ button:hover {
 
     .numbers .right{
         width: 100%;
+    }
+
+    .right{
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #what-we-do:nth-child(even){
+        flex-direction: column-reverse;
+        /* flex-direction: column-reverse; */
     }
 
     .sized-normal{
