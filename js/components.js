@@ -148,66 +148,9 @@ export const NavBar = (locale, homePath) => {
     `;
 }
 
-export const Partners = (locale, homePath, status, yearOf) => {
+export const Partners = (locale, homePath, list, status, yearOf) => {
     console.log(yearOf, locale, status);
-    const partners = [
-        {
-            name: "Ministère de  l’Education Nationale et de la Recherche Scientifique",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "public",
-        },
-        {
-            name: "Ministère de la Fonction Publique, du Travail et de l’Emploi",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "public",
-        },
-        {
-            name: "Ministère des Affaires de la Communauté Est Africaine, de la Jeunesse, des Sports et de la Culture",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "public",
-        },
-        {
-            name: "Ministère de la Femme, de la Solidarité nationale, de la Famille et de l'Action humanitaire",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "public",
-        },
-        {
-            name: "ALCS Tabara",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "associative",
-        },
-        {
-            name: "Fédération Nationale des Associations engagées dans le Domaine de l'Enfance au Burundi, FENADEB",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "associative",
-        },
-        {
-            name: "Jeunesse Porte flambeau contre le Sida et la Drogue, JPCSD",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "associative",
-        },
-        {
-            name: "Fédération des pêcheurs et fournisseurs des poissons au Burundi/ Coopérative des Pêche pour le Développement du Commerce de Poissons au Burundi, FPFPB/ COPEDECOBU",
-            comment: "",
-            letter: "",
-            year: 2022,
-            status: "associative",
-        },
-    ].filter((element) => element.year === yearOf);
+    const partners = list.filter((element) => element.year === yearOf);
     const finalP = partners.filter((element) => element.status === status);
     if (!finalP.length) return `<p class="p-medium">Nous n'avons pas de données pour ${yearOf}</p>`;
     return `${finalP.map((e) => {
@@ -245,6 +188,68 @@ export const ImprovedLife = (locale, homePath, store, year) => {
         <p class="p-medium">♀ Femme ${drugDealers.female} <br/>♂ Homme ${drugDealers.male}</p>
         <p class="section-title large-subtitle title-filter">Malades mentaux<span>${getSubTotal(madPeople)}</span></p>
         <p class="p-medium">♀ Femme ${madPeople.female} <br/>♂ Homme ${madPeople.male}</p>
+    `;
+}
+
+export const ProvinceOfIntervention = (locale, homePath, provinces) => {
+    return `
+    <p class="large-subtitle">
+    ${provinces.map((e) => {
+        return `•${e} <br/><br/>`;
+    })}
+    </p>
+    `.replaceAll(",", "");
+}
+
+
+
+export const NumberStat = (locale, homePath, store) => {
+    const { improvedLife, provincesOfInterventions, partner } = store;
+
+    function getSubTotal(object) {
+        const { male, female } = object;
+        return male + female;
+    }
+
+    function getTotal(sexWorkers, drugDealers, madPeople) {
+        return sexWorkers + getSubTotal(drugDealers) + getSubTotal(madPeople);
+    }
+
+
+    function getImprovedLifeTotal(storeOfImprovedLife) {
+        var total = 0;
+        for (var stringKey of Object.keys(storeOfImprovedLife)) {
+            console.log(stringKey, Number(stringKey))
+            const { sexWorkers, drugDealers, madPeople } = storeOfImprovedLife[Number(stringKey)];
+            total += getTotal(sexWorkers, drugDealers, madPeople);
+        }
+        return total;
+    }
+    return `
+        <div class="bordered-item">
+            <h1 class="b-t-title p-medium">Fondé en</h1>
+            <p class="large-title">2021</p>
+        </div>
+        <div class="bordered-item">
+            <h1 class="b-t-title p-medium">Membres adhérents</h1>
+            <p class="large-title">14</p>
+            <!-- <a href="">En savoir plus</a> -->
+        </div>
+        <div class="bordered-item">
+            <h1 class="b-t-title p-medium">Des vies améliorées</h1>
+            <p class="large-title">${getImprovedLifeTotal(improvedLife)}</p>
+            <a href="./vie-ameliorees/">En savoir plus</a>
+        </div>
+        <div class="bordered-item">
+            <h1 class="b-t-title p-medium">Nos partenaires</h1>
+            <p class="large-title">${partner.list.length}</p>
+            <a href="./partenaires/">En savoir plus</a>
+        </div>
+        <div class="bordered-item">
+            <h1 class="b-t-title p-medium">Provinces d’intervention</h1>
+            <p class="large-title">${provincesOfInterventions.length}</p>
+            <a href="./provinces-d-intervention/">En savoir plus</a>
+        </div>
     `;
 }
 
