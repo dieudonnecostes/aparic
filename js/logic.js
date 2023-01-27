@@ -55,8 +55,8 @@ function selectListener({ key = "", onChange = ()=>{ } }) {
 
 selectListener({
     key: "filter_partner", onChange:(value) => {
-        innerHTML('#public-parters', Partners(locale, homePath, "public", Number(value)));
-        innerHTML('#associative-parters', Partners(locale, homePath, "associative", Number(value)));
+        innerHTML('#public-parters', Partners('fr', homePath, "public", Number(value)));
+        innerHTML('#associative-parters', Partners('fr', homePath, "associative", Number(value)));
     }
 });
 

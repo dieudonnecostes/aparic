@@ -942,7 +942,7 @@ button:hover {
         row-gap: 3rem;
     }
 
-    section, .h-c-title, footer, .professional-view, .nav-menu-holder{
+    section, .h-c-title, footer, .professional-view, .nav-menu-holder, .filter-section{
         padding: 2rem;
     }
 

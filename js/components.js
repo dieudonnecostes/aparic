@@ -155,14 +155,14 @@ export const Partners = (locale, homePath, status, yearOf) => {
             name: "Ministère de  l’Education Nationale et de la Recherche Scientifique",
             comment: "",
             letter: "",
-            year: 2023,
+            year: 2022,
             status: "public",
         },
         {
             name: "Ministère de la Fonction Publique, du Travail et de l’Emploi",
             comment: "",
             letter: "",
-            year: 2021,
+            year: 2022,
             status: "public",
         },
         {
@@ -190,7 +190,7 @@ export const Partners = (locale, homePath, status, yearOf) => {
             name: "Fédération Nationale des Associations engagées dans le Domaine de l'Enfance au Burundi, FENADEB",
             comment: "",
             letter: "",
-            year: 2023,
+            year: 2022,
             status: "associative",
         },
         {
@@ -204,11 +204,13 @@ export const Partners = (locale, homePath, status, yearOf) => {
             name: "Fédération des pêcheurs et fournisseurs des poissons au Burundi/ Coopérative des Pêche pour le Développement du Commerce de Poissons au Burundi, FPFPB/ COPEDECOBU",
             comment: "",
             letter: "",
-            year: 2021,
+            year: 2022,
             status: "associative",
         },
     ].filter((element) => element.year === yearOf);
-    return `${partners.filter((element) => element.status === status).map((e) => {
+    const finalP = partners.filter((element) => element.status === status);
+    if (!finalP.length) return `<p class="p-medium">Nous n'avons pas de données pour ${yearOf}</p>`;
+    return `${finalP.map((e) => {
         console.log(e);
         return `<div class="partner-item">
                     <img src="${e.photo ?? " https://us.123rf.com/450wm/mathier/mathier1905/mathier190500002/mathier190500002.jpg?ver=6"}" />
@@ -221,15 +223,15 @@ export const Partners = (locale, homePath, status, yearOf) => {
 
 export const ImprovedLife = (locale, homePath, store, year) => {
 
-    if(!Object.keys(store).length) return `<p class="large-subtitle">Nous n'avons pas de données pour ${year}</p>`;
-    const {sexWorkers,drugDealers,madPeople} = store;
+    if (!Object.keys(store).length) return `<p class="large-subtitle">Nous n'avons pas de données pour ${year}</p>`;
+    const { sexWorkers, drugDealers, madPeople } = store;
 
-    function getSubTotal(object){
-        const {male,female} = object;
+    function getSubTotal(object) {
+        const { male, female } = object;
         return male + female;
     }
 
-    function getTotal(){
+    function getTotal() {
         return sexWorkers + getSubTotal(drugDealers) + getSubTotal(madPeople);
     }
 
