@@ -273,10 +273,10 @@ footer{
 }
 
 .latest-news {
-    grid-gap: 3rem;
+    grid-gap: 1rem;
     width: 100%;
     height: auto;
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr)) !important;
 }
 
 #pv-meetings, .pv-meetings{
@@ -327,13 +327,14 @@ footer{
 
 
 .single-news {
+    padding: 0rem .5rem;
     background-color: var(--card);
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    border-bottom: .5rem solid var(--cryan);
+    border-bottom: .2rem solid var(--cryan);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
