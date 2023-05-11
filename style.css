@@ -386,6 +386,10 @@ footer{
     column-gap: 1rem;
 }
 
+.c-red{
+    color: var(--red);;
+}
+
 .bg-green {
     background-color: var(--green);
 }
