@@ -36,6 +36,7 @@ export const MenuGrid = (locale, homePath) => {
     <div class="footer-item">
         <p class="footer-item-title">Nos réalisations</p>
         <div class="footer-item-links">
+            <a href="${homePath}rapports">Nos rapports</a>
             <a href="${homePath}realisations/#Bubanza">Bubanza</a>
             <a href="${homePath}realisations#Bujumbura-Mairie">Bujumbura-Mairie</a>
             <a href="${homePath}realisations#Bujumbura">Bujumbura</a>
