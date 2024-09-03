@@ -226,9 +226,16 @@
     <footer id="footer"></footer>
     <section id="contact-us" class="d-padding">
         <p class="section-title large-subtitle">PARLEZ-NOUS</p>
-        <form class="contact-us-form">
+        <form class="contact-us-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="7784453d-cd77-421c-9b57-ffe3c56576a1">
+            <input type="hidden" name="subject" value="Contact à partir de votre site web aparic.org" />
+            <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://web3forms.com/success?title=Nous%20avons%20re%C3%A7u%20votre%20message&desc=Notre%20%C3%A9quipe%20vous%20r%C3%A9pondra%20dans%20les%2024%20heures"
+                />
             <div className="input-labeled">
-                <input type="name" placeholder="Noms" name="Name" required></input>
+                <input type="name" placeholder="Noms" name="Noms" required></input>
             </div>
             <div className="input-labeled">
                 <input type="name" placeholder="Email" name="Email" required></input>
@@ -236,6 +243,7 @@
             <div className="input-labeled">
                 <textarea type="name" placeholder="Message" name="Message" required></textarea>
             </div>
+            <div class="h-captcha" data-captcha="true"></div>
             <button type="submit">Envoyer</button>
         </form>
     </section>
