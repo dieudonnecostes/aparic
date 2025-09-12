@@ -724,6 +724,8 @@ button:hover {
     color: black;
     cursor: pointer;
     margin-top: 1rem;
+    align-items: center;
+    text-align: center;
 }
 
 .single-pv-title:hover{
@@ -732,6 +734,7 @@ button:hover {
 
 .single-pv-subtitle{
     color: gray;
+    text-align: center;
 }
 
 .single-pv iframe{

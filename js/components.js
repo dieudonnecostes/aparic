@@ -71,12 +71,13 @@ export const MenuGrid = (locale, homePath) => {
         </div>
     </div>
     <div class="footer-item">
-    <p class="footer-item-title">Vie associative</p>
-    <div class="footer-item-links">
-        <a href="${homePath}pv">PV des réunions</a>
-        <a href="https://d29cc8o2s6hm2a.cloudfront.net/aparic/Fiche+de+cre%CC%81ation+d'un+organe.docx" target="_blank">Fiche de création d'un organe</a>
+        <p class="footer-item-title">Vie associative</p>
+        <div class="footer-item-links">
+            <a href="${homePath}pv">PV des réunions</a>
+            <a href="https://d29cc8o2s6hm2a.cloudfront.net/aparic/Fiche+de+cre%CC%81ation+d'un+organe.docx" target="_blank">Fiche de création d'un organe</a>
+            <a href="${homePath}assistances-techniques">Assistances Technique</a>
+        </div>
     </div>
-</div>
     <div class="footer-item">
         <p class="footer-item-title">Nos projets</p>
         <div class="footer-item-links">
